@@ -8,6 +8,8 @@ A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jack
 - 🌐 Multithreaded web crawler integration
 - ⚙️ Built to showcase Java skills for internships and system design
 
+---
+
 ## 🔧 Features
 
 - Add tasks with `POST /tasks`
@@ -17,6 +19,8 @@ A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jack
 - Crawl productivity articles from the web
 - Save the chain to `blockchain.json` for persistence
 
+---
+
 ## 🚀 Tech Stack
 
 - Java 17
@@ -24,6 +28,28 @@ A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jack
 - Jackson (for JSON serialization)
 - REST API (Spring Web)
 - Manual blockchain implementation (custom hash + validation)
+
+---
+
+## 📂 File Structure
+
+TaskLedger/
+├── src/
+│ └── main/java/com/taskledger/
+│ ├── model/Task.java
+│ ├── blockchain/Block.java, Blockchain.java
+│ ├── controller/TaskController.java
+│ ├── crawler/ProductivityCrawler.java
+│ └── util/HashUtil.java
+├── blockchain.json
+├── README.md
+└── pom.xml
+
+yaml
+Copy
+Edit
+
+---
 
 ## 🧪 Example Usage
 
@@ -43,35 +69,3 @@ bash
 Copy
 Edit
 curl http://localhost:8080/tasks/validate
-🏁 Setup
-bash
-Copy
-Edit
-git clone https://github.com/YOUR_USERNAME/TaskLedger.git
-cd TaskLedger
-Open the project in IntelliJ or VSCode and run TaskLedgerApplication.java.
-
-🙋‍♂️ Author
-Divine Doamekpor
-Computer Science + Data Science @ University of Mary Washington
-
-yaml
-Copy
-Edit
-
----
-
-### 3. Save the file
-
-Use `Cmd + S` (Mac) or `Ctrl + S` (Windows) to save.
-
----
-
-### 4. Commit it to GitHub
-
-In your terminal:
-
-```bash
-git add README.md
-git commit -m "Add project README"
-git push
