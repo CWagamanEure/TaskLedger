@@ -76,16 +76,4 @@ cd TaskLedger
 3. Run `TaskLedgerApplication.java`  
 4. Interact with the API using Postman or `curl`
 
-## 🙋‍♂️ Author
-
-**Divine Doamekpor**  
-Computer Science + Data Science @ University of Mary Washington  
-[GitHub](https://github.com/) · [LinkedIn](https://www.linkedin.com/)
-
-## ✅ TODO (Future Plans)
-
-- Add Swagger API docs
-- Add login/auth with Spring Security
-- Add task categories, deadlines
-- Build a UI frontend (React or Thymeleaf)
 
