@@ -1,0 +1,29 @@
+SpringBoot Notes
+
+
+Run the App:  ./mvnw spring-boot:run
+
+Clean the build: ./mvnw clean
+
+Build the Project: ./mvnw package
+then run it like: java -jar ...
+
+
+API endpoints to call:
+
+Add a Task: 
+curl -X POST http://localhost:8080/tasks \
+-H "Content-Type: application/json" \
+-d '{"title":"Learn Java","completed":false}'
+
+View All Tasks:
+curl http://localhost:8080/tasks
+
+Mark a Task as Completed:
+curl -X PUT http://localhost:8080/tasks/1/complete
+
+View the Blockchain:
+curl http://localhost:8080/tasks/chain
+
+Validate the Blockchain:
+curl http://localhost:8080/tasks/validate
