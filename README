@@ -8,8 +8,6 @@ A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jack
 - 🌐 Multithreaded web crawler integration
 - ⚙️ Built to showcase Java skills for internships and system design
 
----
-
 ## 🔧 Features
 
 - Add tasks with `POST /tasks`
@@ -19,8 +17,6 @@ A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jack
 - Crawl productivity articles from the web
 - Save the chain to `blockchain.json` for persistence
 
----
-
 ## 🚀 Tech Stack
 
 - Java 17
@@ -29,27 +25,21 @@ A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jack
 - REST API (Spring Web)
 - Manual blockchain implementation (custom hash + validation)
 
----
-
 ## 📂 File Structure
 
+```
 TaskLedger/
 ├── src/
-│ └── main/java/com/taskledger/
-│ ├── model/Task.java
-│ ├── blockchain/Block.java, Blockchain.java
-│ ├── controller/TaskController.java
-│ ├── crawler/ProductivityCrawler.java
-│ └── util/HashUtil.java
+│   └── main/java/com/taskledger/
+│       ├── model/Task.java
+│       ├── blockchain/Block.java, Blockchain.java
+│       ├── controller/TaskController.java
+│       ├── crawler/ProductivityCrawler.java
+│       └── util/HashUtil.java
 ├── blockchain.json
 ├── README.md
 └── pom.xml
-
-yaml
-Copy
-Edit
-
----
+```
 
 ## 🧪 Example Usage
 
@@ -59,13 +49,43 @@ Edit
 curl -X POST http://localhost:8080/tasks \
 -H "Content-Type: application/json" \
 -d '{"title":"Finish Resume", "completed":false}'
-✅ Mark a task as completed
-bash
-Copy
-Edit
+```
+
+### ✅ Mark a task as completed
+
+```bash
 curl -X PUT http://localhost:8080/tasks/1/complete
-🔍 Validate blockchain
-bash
-Copy
-Edit
+```
+
+### 🔍 Validate blockchain
+
+```bash
 curl http://localhost:8080/tasks/validate
+```
+
+## 🏁 Setup
+
+1. Clone this repo:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/TaskLedger.git
+cd TaskLedger
+```
+
+2. Open in IntelliJ or VSCode  
+3. Run `TaskLedgerApplication.java`  
+4. Interact with the API using Postman or `curl`
+
+## 🙋‍♂️ Author
+
+**Divine Doamekpor**  
+Computer Science + Data Science @ University of Mary Washington  
+[GitHub](https://github.com/) · [LinkedIn](https://www.linkedin.com/)
+
+## ✅ TODO (Future Plans)
+
+- Add Swagger API docs
+- Add login/auth with Spring Security
+- Add task categories, deadlines
+- Build a UI frontend (React or Thymeleaf)
+
