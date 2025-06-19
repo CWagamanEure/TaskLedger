@@ -33,33 +33,3 @@ A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jack
 
 ## 📂 File Structure
 
-
----
-
-## 🧪 Example Usage
-
-### ➕ Add a task
-```bash
-curl -X POST http://localhost:8080/tasks \
--H "Content-Type: application/json" \
--d '{"title":"Finish Resume", "completed":false}'
-
-### Mark a Task as completed
-
-curl -X PUT http://localhost:8080/tasks/1/complete
-
-
-### Validate the Blockchain
-
-curl http://localhost:8080/tasks/validate
-
-
-
-Why did I make this Mess?
-I wanted to combine:
-
-My learning in Java & Spring Boot
-
-My interest in blockchain concepts
-
-My understanding of multithreaded systems
