@@ -1,5 +1,3 @@
-"""
-
 # 🧾 TaskLedger – Blockchain-Based Task Manager
 
 This project is a blockchain-powered task manager built with **Java**, **Spring Boot**, and **Jackson**, designed to explore how immutable logging, REST APIs, and multithreaded crawlers can intersect in a practical software application.
@@ -92,4 +90,3 @@ TaskLedger/
 - 💾 Support multiple users and public/private task chains
 
 ---
-"""
