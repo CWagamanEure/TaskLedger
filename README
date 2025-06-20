@@ -1,31 +1,70 @@
-# TaskLedger 🧾⛓️
+# 🧾 TaskLedger – Blockchain-Based Task Manager
 
-A blockchain-based task manager built with **Java**, **Spring Boot**, and **Jackson**, featuring:
+This project is a blockchain-powered task manager built with **Java**, **Spring Boot**, and **Jackson**, designed to explore how immutable logging, REST APIs, and multithreaded crawlers can intersect in a practical software application.
 
-- ✅ RESTful API for task management (CRUD)
-- ⛓️ Immutable task tracking via custom blockchain
-- 📂 JSON-based persistent ledger storage
-- 🌐 Multithreaded web crawler integration
-- ⚙️ Built to showcase Java skills for internships and system design
+> “Blockchain isn't just about crypto—it’s about **trust** through **transparency**.”
+
+---
+
+## 🧠 Project Summary
+
+- Built a REST API task tracker with **Spring Boot**
+- Used a custom **blockchain** to immutably log each completed task
+- Persisted the full blockchain ledger to `blockchain.json`
+- Supported multithreaded crawling of productivity articles from online sources
+- Enabled chain validation to detect tampering on restart
+- Designed to demonstrate practical Java skills using **real-world systems thinking**
+
+---
+
+## ⚙️ Tech Stack
+
+| Tool        | Role                                        |
+|-------------|---------------------------------------------|
+| Java 17     | Core language                               |
+| Spring Boot | REST API + project framework                |
+| Jackson     | JSON serialization                          |
+| Maven       | Build tool & dependency manager             |
+| CURL / Postman | API interaction                          |
+
+---
 
 ## 🔧 Features
 
-- Add tasks with `POST /tasks`
-- Mark tasks as completed with `PUT /tasks/{id}/complete`
-- Validate blockchain integrity via `GET /tasks/validate`
-- View the blockchain: `GET /tasks/chain`
-- Crawl productivity articles from the web
-- Save the chain to `blockchain.json` for persistence
+- `POST /tasks` – Add a new task
+- `PUT /tasks/{id}/complete` – Mark a task complete and write to the blockchain
+- `GET /tasks` – View all tasks
+- `GET /tasks/chain` – View blockchain history
+- `GET /tasks/validate` – Verify chain integrity
+- `GET /tasks/crawl` – Run a background web crawler
 
-## 🚀 Tech Stack
+---
 
-- Java 17
-- Spring Boot
-- Jackson (for JSON serialization)
-- REST API (Spring Web)
-- Manual blockchain implementation (custom hash + validation)
+## 🧪 Example Usage
 
-## 📂 File Structure
+### ➕ Add a Task
+
+```bash
+curl -X POST http://localhost:8080/tasks \
+-H "Content-Type: application/json" \
+-d '{"title":"Finish Resume", "completed":false}'
+```
+
+### ✅ Complete a Task
+
+```bash
+curl -X PUT http://localhost:8080/tasks/1/complete
+```
+
+### 🔎 Validate the Blockchain
+
+```bash
+curl http://localhost:8080/tasks/validate
+```
+
+---
+
+## 📂 Project Structure
 
 ```
 TaskLedger/
@@ -37,43 +76,17 @@ TaskLedger/
 │       ├── crawler/ProductivityCrawler.java
 │       └── util/HashUtil.java
 ├── blockchain.json
-├── README.md
-└── pom.xml
+├── pom.xml
+└── README.md
 ```
 
-## 🧪 Example Usage
+---
 
-### ➕ Add a task
+## 🧩 Future Improvements
 
-```bash
-curl -X POST http://localhost:8080/tasks \
--H "Content-Type: application/json" \
--d '{"title":"Finish Resume", "completed":false}'
-```
+- 🔐 Add JWT-based user auth
+- 📊 Add Swagger UI for API docs
+- 🌐 Add frontend dashboard (React or Thymeleaf)
+- 💾 Support multiple users and public/private task chains
 
-### ✅ Mark a task as completed
-
-```bash
-curl -X PUT http://localhost:8080/tasks/1/complete
-```
-
-### 🔍 Validate blockchain
-
-```bash
-curl http://localhost:8080/tasks/validate
-```
-
-## 🏁 Setup
-
-1. Clone this repo:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/TaskLedger.git
-cd TaskLedger
-```
-
-2. Open in IntelliJ or VSCode  
-3. Run `TaskLedgerApplication.java`  
-4. Interact with the API using Postman or `curl`
-
-
+---
